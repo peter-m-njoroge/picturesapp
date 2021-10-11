@@ -1,0 +1,2243 @@
+Screenmanagement:
+    Screen1:
+        name:"Screen1"
+        Pagesonfirst:
+            Boxlayoutexample1:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"back.jpg"
+                orientation:"vertical"
+                Label:
+                    size_hint:(1,.05)
+                    text:"Welcome"
+                    color: 1,0,0,1
+                Image:
+                    size_hint:(1,.95)
+                    allow_stretch:True
+                    source:"welkie.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    text:"ABOUT"
+                    color:0,0,1,1
+                    on_press:root.current="Screen_About"
+
+                Label:
+                    size_hint:(1,.05)
+                    text:"Slide to Right to go to sign in page"
+                    color: 1,1,1,1
+            Boxlayoutexample2:
+                orientation:"vertical"
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Label:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':1}
+                    text:"Please Sign In"
+                    color: 1,0,0,1
+                Boxlayoutexample3:
+                    size_hint:(1,.6)
+                    Boxlayoutexample4:
+                        pos_hint:{'x':1,'y':0.5}
+                        size_hint:(.5,.8)
+                        Boxlayoutexample5:
+                            orientation:"vertical"
+                            Label:
+                                size_hint:(None,None)
+                                height:"20dp"
+                                width:"20dp"
+                                text:"Password"
+                                color: 0,1,0,1
+                                pos_hint:{'x':1,'y':0.4}
+                        Boxlayoutexample6:
+                            orientation:"vertical"
+                            TextInput:
+                                id:user_pass
+                                size_hint:(None,None)
+                                height:"30dp"
+                                width:"120dp"
+                                pos_hint:{'x':0.5,'y':0.5}
+                        Label:
+                            size_hint:(.5,1)
+                Label:
+                    size_hint:(1,.3)
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"SUBMIT"
+                    on_press:app.Button1press()
+
+    Screen_About:
+        name:"Screen_About"
+        About1:
+            Label:
+
+            About2:
+                size_hint_x:.8
+                orientation:"vertical"
+                Label:
+                    pos_hint:{'x':.0,'y':9}
+                    size_hint:(1,.3)
+                    text:"This Application"
+                Label:
+                    pos_hint:{'x':0,'y':.8}
+                    size_hint:(1,.3)
+                    text:"is Developed"
+                Label:
+                    pos_hint:{'x':0,'y':.7}
+                    size_hint:(1,.3)
+                    text:"By"
+
+                Label:
+                    pos_hint:{'x':0,'y':.6}
+                    size_hint:(1,.3)
+                    text:"Peter Muchina Njoroge"
+                Label:
+                    pos_hint:{'x':0,'y':.5}
+                    size_hint:(1,.3)
+                    text:"It is a photo app"
+                Label:
+                    pos_hint:{'x':0,'y':.4}
+                    size_hint:(1,.3)
+                    text:"that contains"
+                Label:
+                    pos_hint:{'x':0,'y':.3}
+                    size_hint:(1,.3)
+                    text:"members of ICT9A"
+
+                Label:
+                    pos_hint:{'x':0,'y':.2}
+                    size_hint:(1,.3)
+                    text:"In NYS IBS"
+                Label:
+                    pos_hint:{'x':0,'y':.2}
+                    size_hint:(1,.3)
+                    text:"Contact Me on"
+                Label:
+                    pos_hint:{'x':0,'y':.2}
+                    size_hint:(1,.3)
+                    text:"Email:petenjorom@gmail.com"
+
+                Label:
+
+                Label:
+
+
+            Button:
+                size_hint:(1,.1)
+                pos_hint:{'x':0.0,'y':0.0}
+                text:"Back"
+                on_press:root.current="Screen1"
+
+
+    Screen_Wrong:
+        name:"Screen_Wrong"
+        Wrong2:
+            canvas.before:
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+                    source:"wrong.jpg"
+            orientation:"vertical"
+            Wrong1:
+                orientation:"vertical"
+                Label:
+                    size_hint:(1,.05)
+                    text:"Wrong Password"
+                    color: 1,0,0,1
+                Label:
+                    size_hint:(1,.05)
+                    text:"HINT:BENARD MWANGI'S HOTSPOT "
+                    color: 0,1,0,1
+                Label:
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"TRY AGAIN"
+                    on_press:root.current="Screen1"
+
+    Screen_Whole:
+        name:"Screen_Whole"
+        PagesWhole:
+            Whole1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            Whole2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            Whole3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            Whole4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            Whole5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+    Screen2:
+        name:"Screen2"
+        Boxlayoutexample7:
+            orientation:"vertical"
+            Label:
+                size_hint:(1,.1)
+                pos_hint:{'x':0.0,'y':1}
+                text:"ICT 9A MEMBERS"
+                color: 1,0,0,1
+            Label:
+                size_hint:(1,.1)
+                pos_hint:{'x':0.0,'y':.9}
+                text:"CLICK TO VIEW PICTURES"
+                color: 0,1,0,1
+            Boxlayoutexample8:
+                Scroller:
+                    Boxlayoutexample9:
+                        size_hint:(1,None)
+                        height:self.minimum_height
+                        orientation:"vertical"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"PETER MUCHINA"
+                            on_press:root.current="Screen_Peter"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"PAMELA JUMA"
+                            on_press:root.current="Screen_PAMELA"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"DOREEN OMWALA"
+                            on_press:root.current="Screen_DOREEN"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"MIKE KILONZO"
+                            on_press:root.current="Screen_MIKE"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"JOHN OGOLA"
+                            on_press:root.current="Screen_JOHN"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"CENTRINE KITUI"
+                            on_press:root.current="Screen_CENTRINE"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"JOSEPH KARANJA"
+                            on_press:root.current="Screen_JOSEPH"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"BENARD MWANGI"
+                            on_press:root.current="Screen_BENARD"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"BENSON KARIUKI"
+                            on_press:root.current="Screen_BENSON"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"CLINTON WANAKACHA"
+                            on_press:root.current="Screen_CLINTON"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"SAMUEL KAMAU"
+                            on_press:root.current="Screen_SAMUEL"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"LOISE MUTHONI"
+                            on_press:root.current="Screen_LOISE"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"BRIAN TIRIA"
+                            on_press:root.current="Screen_BRIAN"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"COLLINS SAWE"
+                            on_press:root.current="Screen_COLLINS"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"ERIC OMWENGA"
+                            on_press:root.current="Screen_ERIC"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"JOHN MUNYAKA"
+                            on_press:root.current="Screen_JOHNM"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"RUTH WASWA"
+                            on_press:root.current="Screen_RUTH"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"RUTH MORAA"
+                            on_press:root.current="Screen_RUTHM"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"RONALD OTIENO"
+                            on_press:root.current="Screen_RONALD"
+                        Button:
+                            size_hint:(1,None)
+                            height:"50dp"
+                            text:"NICHOLAS OGALO"
+                            on_press:root.current="Screen_NICHOLAS"
+
+            Button:
+                size_hint:(1,.1)
+                pos_hint:{'x':0.0,'y':0.0}
+                text:"Group Photos"
+                color:1,0,0,1
+                on_press:root.current="Screen_Whole"
+
+
+            Button:
+                size_hint:(1,.1)
+                pos_hint:{'x':0.0,'y':0.0}
+                text:"Back"
+                color:0,0,1,1
+                on_press:root.current="Screen1"
+
+    Screen_Peter:
+        name:"Screen_Peter"
+        PagesPeter:
+            Boxlayoutexample10:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            Boxlayoutexample11:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            Boxlayoutexample12:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+    Screen_PAMELA:
+        name:"Screen_PAMELA"
+        PagesPAMELA:
+            PAMELA1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            PAMELA2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            PAMELA3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            PAMELA4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            PAMELA5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_DOREEN:
+        name:"Screen_DOREEN"
+        PagesDOREEN:
+            DOREEN1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            DOREEN2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            DOREEN3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            DOREEN4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            DOREEN5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+    Screen_MIKE:
+        name:"Screen_MIKE"
+        PagesMIKE:
+            MIKE1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            MIKE2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            MIKE3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            MIKE4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            MIKE5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_JOHN:
+        name:"Screen_JOHN"
+        PagesJOHN:
+            JOHN1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            JOHN2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            JOHN3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            JOHN4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            JOHN5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_CENTRINE:
+        name:"Screen_CENTRINE"
+        PagesCENTRINE:
+            CENTRINE1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            CENTRINE2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            CENTRINE3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            CENTRINE4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            CENTRINE5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_JOSEPH:
+        name:"Screen_JOSEPH"
+        PagesJOSEPH:
+            JOSEPH1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            JOSEPH2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            JOSEPH3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            JOSEPH4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            JOSEPH5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_BENARD:
+        name:"Screen_BENARD"
+        PagesBENARD:
+            BENARD1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            BENARD2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            BENARD3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            BENARD4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            BENARD5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_BENSON:
+        name:"Screen_BENSON"
+        PagesBENSON:
+            BENSON1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            BENSON2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            BENSON3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            BENSON4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            BENSON5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_CLINTON:
+        name:"Screen_CLINTON"
+        PagesCLINTON:
+            CLINTON1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            CLINTON2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            CLINTON3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            CLINTON4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            CLINTON5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_SAMUEL:
+        name:"Screen_SAMUEL"
+        PagesSAMUEL:
+            SAMUEL1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            SAMUEL2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            SAMUEL3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            SAMUEL4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            SAMUEL5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_LOISE:
+        name:"Screen_LOISE"
+        PagesLOISE:
+            LOISE1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            LOISE2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            LOISE3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            LOISE4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            LOISE5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+
+    Screen_BRIAN:
+        name:"Screen_BRIAN"
+        PagesBRIAN:
+            BRIAN1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            BRIAN2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            BRIAN3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            BRIAN4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            BRIAN5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_COLLINS:
+        name:"Screen_COLLINS"
+        PagesCOLLINS:
+            COLLINS1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            COLLINS2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            COLLINS3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            COLLINS4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            COLLINS5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_ERIC:
+        name:"Screen_ERIC"
+        PagesERIC:
+            ERIC1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            ERIC2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            ERIC3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            ERIC4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            ERIC5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_JOHNM:
+        name:"Screen_JOHNM"
+        PagesJOHNM:
+            JOHNM1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            JOHNM2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            JOHNM3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            JOHNM4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            JOHNM5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_RUTH:
+        name:"Screen_RUTH"
+        PagesRUTH:
+            RUTH1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            RUTH2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            RUTH3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            RUTH4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            RUTH5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_RUTHM:
+        name:"Screen_RUTHM"
+        PagesRUTHM:
+            RUTHM1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            RUTHM2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            RUTHM3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            RUTHM4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            RUTHM5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_RONALD:
+        name:"Screen_RONALD"
+        PagesRONALD:
+            RONALD1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            RONALD2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            RONALD3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            RONALD4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            RONALD5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+    Screen_NICHOLAS:
+        name:"Screen_NICHOLAS"
+        PagesNICHOLAS:
+            NICHOLAS1:
+                orientation:"vertical"
+
+                Image:
+                    size_hint:(1,.90)
+                    allow_stretch:True
+                    source:"petero.jpg"
+
+                Button:
+                    size_hint:(1,.1)
+                    pos_hint:{'x':0.0,'y':0.0}
+                    text:"Go Back"
+                    color:0,0,1,1
+                    on_press:root.current="Screen2"
+
+            NICHOLAS2:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero1.jpg"
+
+            NICHOLAS3:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+            NICHOLAS4:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+            NICHOLAS5:
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                        source:"night.jpg"
+                Image:
+                    size_hint:(1,1)
+                    allow_stretch:True
+                    source:"petero2.jpg"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
